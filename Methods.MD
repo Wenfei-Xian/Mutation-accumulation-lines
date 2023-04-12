@@ -4,4 +4,5 @@
    
 2, Genome polish
    Self-hifi reads were mapped to self-assembly using minimap2, sequence depth was conduct by mosdepth, and deepvariant was used to call the variants. 
-   
+   Using retain_homozygous.py, homozygous variants with REF Allele depth <= 3, total depth within 0.5 to 2 times the sequencing depth, and biallelic were retained.
+   `bcftools consensus -f MA31-89.scaffolds_contigs.v2.fa MA31-89.scaffolds_contigs.v2.fa.MA31-89.dc_q20.fastq.gz.sorted.bam.vcf.homo.vcf.gz > MA31-89.scaffolds_contigs.v2.polished.fa`
